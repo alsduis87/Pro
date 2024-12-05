@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم تسجيل الخروج</title>
+    <link rel="stylesheet" href="styles.css"> <!-- تأكد من ربط ملف CSS -->
+    <script>
+    history.pushState(null, null, location.href); window.onpopstate = function () { history.pushState(null, null, location.href); };
+</script
+
+     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* لون خلفية فاتح */
+            margin: 0;
+            padding: 20px;
+           
+          
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff; /* خلفية بيضاء للصفحة */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333; /* لون نص العنوان */
+            text-align: center;
+        }
+        p {
+            color: black; /* لون نص الرسالة */
+            text-align: center;
+            margin: 20px 0;
+        }
+        .login-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* لون الخلفية لزر تسجيل الدخول */
+            color: white; /* لون النص */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold; /* نص قوي */
+            margin-top: 20px;
+            text-decoration: none; /* إزالة الخط تحت الرابط */
+        }
+        .login-button:hover {
+            background-color: #0056b3; /* تغيير اللون عند تمرير الماوس */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تم تسجيل الخروج</h1>
+        <p>لقد تم تسجيل خروجك بنجاح.</p>
+        <p>إذا كنت ترغب في العودة إلى صفحة تسجيل الدخول، يمكنك الضغط على الزر أدناه.</p>
+        <a href="login.html" class="login-button">تسجيل الدخول مرة أخرى</a>
+    </div>
+</body>
+</html>

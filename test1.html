@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>اختبار مكونات الحاسوب</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eceff1;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: black;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .question {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .question:last-child {
+            border-bottom: none;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 10px 0;
+            color: blue;
+        }
+
+        label {
+            
+            margin: 5px 0;
+            font-size: 16px;
+            color: #190c11
+            
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        button {
+            background-color: #6159ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #e025af;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+         .button {
+        display: block;
+        width: auto;
+        padding: 12px;
+        background-color: #007bff; /* لون زر الاستكشاف */
+        color: white; /* لون النص */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold; /* نص قوي */
+        margin-top: 20px;
+        text-decoration: none; /* إزالة الخط تحت الرابط */
+        text-align: center;
+        }
+        .button:hover {
+       
+       background-color: #9129BE; /* تغيي 
+       
+          </style>
+            
+    
+    </style>
+    <script>
+        var correctAnswers = ["a2", "a1", "a2", "a1", "a1"];
+
+        function checkAnswers() {
+            var userAnswers = [
+                document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : "",
+                document.querySelector('input[name="q2"]:checked') ? document.querySelector('input[name="q2"]:checked').value : "",
+                document.querySelector('input[name="q3"]:checked') ? document.querySelector('input[name="q3"]:checked').value : "",
+                document.querySelector('input[name="q4"]:checked') ? document.querySelector('input[name="q4"]:checked').value : "",
+                document.querySelector('input[name="q5"]:checked') ? document.querySelector('input[name="q5"]:checked').value : ""
+            ];
+            var score = 0;
+            for (var i = 0; i < correctAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+            alert("لقد حصلت على " + score + " من 5");
+        }
+
+        function showCorrectAnswers() {
+            var answers = [
+                "السؤال 1: وحدة المعالجة المركزية",
+                "السؤال 2: Windows",
+                "السؤال 3: القرص الصلب",
+                "السؤال 4: نظام التشغيل",
+                "السؤال 5: وحدة المعالجة المركزية"
+            ];
+            alert("الإجابات الصحيحة:\n" + answers.join("\n"));
+        }
+    </script>
+</head>
+<body>
+    <h1>اختبار مكونات الحاسوب</h1>
+    <form id="quizForm" onsubmit="return false;">
+        <div class="question">
+            <h2>السؤال 1:</h2>
+            <p>ما هو اسم وحدة المعالجة المركزية؟</p>
+            <input type="radio" id="q1a1" name="q1" value="a1">
+            <label for="q1a1">ذاكرة الوصول العشوائي</label><br>
+            <input type="radio" id="q1a2" name="q1" value="a2">
+            <label for="q1a2">وحدة المعالجة المركزية</label><br>
+            <input type="radio" id="q1a3" name="q1" value="a3">
+            <label for="q1a3">القرص الصلب</label><br>
+        </div>
+
+        <div class="question">
+            <h2>السؤال 2:</h2>
+            <p>ما هو نظام التشغيل الأكثر شيوعاً؟</p>
+            <input type="radio" id="q2a1" name="q2" value="a1">
+ <label for="q2a1">Windows</label><br>
+            <input type="radio" id="q2a2" name="q2" value="a2">
+            <label for="q2a2">macOS</label><br>
+            <input type="radio" id="q2a3" name="q2" value="a3">
+            <label for="q2a3">Linux</label><br>
+        </div>
+
+        <div class="question">
+            <h2>السؤال 3:</h2>
+            <p>ما هو اسم الجهاز الذي يخزن البيانات بشكل دائم؟</p>
+            <input type="radio" id="q3a1" name="q3" value="a1">
+            <label for="q3a1">ذاكرة الوصول العشوائي</label><br>
+            <input type="radio" id="q3a2" name="q3" value="a2">
+            <label for="q3a2">القرص الصلب</label><br>
+            <input type="radio" id="q3a3" name="q3" value="a3">
+            <label for="q3a3">وحدة المعالجة المركزية</label><br>
+        </div>
+
+        <div class="question">
+            <h2>السؤال 4:</h2>
+            <p>ما هو البرمجية التي تتيح للمستخدم التفاعل مع الحاسوب؟</p>
+            <input type="radio" id="q4a1" name="q4" value="a1">
+            <label for="q4a1">نظام التشغيل</label><br>
+            <input type="radio" id="q4a2" name="q4" value="a2">
+            <label for="q4a2">الذاكرة</label><br>
+            <input type="radio" id="q4a3" name="q4" value="a3">
+            <label for="q4a3">القرص الصلب</label><br>
+        </div>
+
+        <div class="question">
+            <h2>السؤال 5:</h2>
+            <p>ما هي المكونة المسؤولة عن تنفيذ العمليات الحسابية والمنطقية؟</p>
+            <input type="radio" id="q5a1" name="q5" value="a1">
+            <label for="q5a1">وحدة المعالجة المركزية</label><br>
+            <input type="radio" id="q5a2" name="q5" value="a2">
+            <label for="q5a2">الذاكرة</label><br>
+            <input type="radio" id="q5a3" name="q5" value="a3">
+            <label for="q5a3">القرص الصلب</label><br>
+        </div>
+
+        <div class="buttons">
+            <button type="button" onclick="checkAnswers()">عرض النتيجة</button>
+            <button type="button" onclick="showCorrectAnswers()">معرفة الإجابات الصحيحة</button>
+        
+          
+     <a href="test2.html" class="button">السؤال التالي 🔥</a>
+          <a href="explore.html" class="button">back </a>
+          </div>
+    </form>
+   
+ 
+</body>
+</html>

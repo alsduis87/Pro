@@ -1,0 +1,242 @@
+
+<!DOCTYPE html> <html lang="ar"> 
+    <head> 
+        <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>مكونات 
+الحاسوب البرمجية </title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+           
+        }
+        h1 {
+            color: #2E8B57;
+            text-align: center;
+        }
+        h2 {
+            color: #4682B4;
+            margin-top: 30px;
+        }
+        p    {
+             text-align: right;
+             font-size:17px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+               .component {
+                background: #ffffff;
+                   margin: 15px 0;
+                   padding: 15px;
+                   border-radius: 5px;
+                   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                   display: auto;
+         
+                   align-items: center;
+                    
+        }
+        
+        .component img {
+            margin: auto;
+            max-width: 150px;
+            border-radius: 5px;
+           background-position: center; /* محاذاة الصورة في المنتصف */
+
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            
+            direction: rtl;
+        }
+        select {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+         .back{
+            display: inline-block;
+            padding: 16px 15px;
+            background-color: #3BA0F2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            
+        }
+          
+        .back:hover{
+          background-color: red;
+        }
+    </style>
+    </head> 
+    <body> 
+      <div class="container"> 
+      <h1>مكونات الحاسوب البرمجية</h1> 
+      <p>
+      هي الجزء الثاني غير الملموس من نظام الحاسب الآلي والذي يصبح الحاسب عديم الفائدة بدونه ، فهي وسيلة الوصل بين الحاسب والمستخدم ، وهو الجزء القابل للتطوير والإنشاء ليسهل على المستخدم المهام التي يرجوها من الحاسب
+      </p>
+      <h2>اختر مكونًا</h2> 
+      <select id="component" onchange="showComponent(this.value)"> <option value="" disabled selected>اختر مكونًا</option> 
+   <option value="software">البرمجيات</option> 
+   <option value="programming_languages">لغات البرمجة</option> 
+   <option value="operating_systems">أنظمة التشغيل</option>
+   <option value="applications">التطبيقات</option>
+   </select>
+   <section>
+      <div id="components">
+         <div id="software" style="display:none;"> 
+         <h2>البرمجيات</h2>
+         <p>البرمجيات هي مجموعة من التعليمات والبيانات التي تخبر الحاسوب بما يجب فعله. هي الجزء غير المادي من الحاسوب، على عكس الأجزاء المادية مثل المعالج والذاكرة. يمكن تشبيه البرمجيات بالدماغ الذي يتحكم في عمل الحاسوب.</p> 
+
+         <div class="component"> 
+         <h2>أنواع البرمجيات</h2> 
+         
+
+         <ul>
+            <li>
+                
+              <b>برمجيات النظام (System Software):</b> هي البرمجيات الأساسية التي تدير عمل الحاسوب وتوفر بيئة للتشغيل لبرامج أخرى. من الأمثلة عليها: أنظمة التشغيل، برامج التشغيل (Drivers)، وبرامج الأمان.</li> 
+              <img src="system software.jpg" alt=" software ">
+        <li>
+            
+          <b>برمجيات التطبيقات (Application Software):</b> هي البرمجيات التي تستخدم لأداء مهام محددة، مثل معالجة النصوص، جداول البيانات، التصفح، الألعاب، وغيرها.</li> 
+           <img src="application software.jpg" alt=" software ">
+          </ul>
+         
+
+          </div> 
+          </div>
+    <div id="programming_languages" style="display:none;"> 
+    <h2>لغات البرمجة</h2> 
+    <p>لغات البرمجة هي لغات اصطناعية تستخدم للتواصل مع الحاسوب وإعطائه الأوامر. يتم استخدامها لكتابة البرمجيات. من الأمثلة على لغات البرمجة الشائعة: Python, Java,C#, PHP,Sql, C++, JavaScript.,CSS</p> 
+    <div class="component"> 
+    <h2>أمثلة على لغات البرمجة</h2> 
+
+    <ul>
+       
+
+       <li>
+         <b>Python:</b> 
+         لغة سهلة التعلم تستخدم في مجالات متنوعة مثل تعلم الآلة، تحليل البيانات، وتطوير الويب.</li> 
+         <img src="Python.jpg" alt=" software ">
+
+
+         <li>
+
+           <b>Java:</b> لغة تستخدم
+           لتطوير تطبيقات سطح المكتب وتطبيقات الويب، وهي معروفة بكونها لغة مستقلة عن النظام الأساسي.</li>
+           <img src="java.jpg" alt=" software ">
+ <li><b>JavaScript:</b>
+  لغة ديناميكية تم تصميمها خصيصًا لتجعل صفحات الويب أكثر تفاعلًا وتبث في صفحات الويب الحياة والروح.
+  وهي لغة برمجة خفيفة الوزن وهي لغة من أكثر اللغات شهرة في العالم وهي مصممة خصيصًا لصفحات الويب.
+  </li>
+ <img src="JavaScript.jpg" alt=" software ">
+           <li><b>++C:</b>
+      لغة قوية تستخدم لتطوير ألعاب الفيديو، أنظمة التشغيل، وتطبيقات الأداء العالي.</li> 
+             <img src="cplace.jpg" alt=" software ">
+
+ <li><b>#C:</b>
+      هي لغة برمجة أنيقة، كائنيّة التوجه Object-oriented بأنواع بيانات سليمة Type-safe تمكّن المطورين من بناء تطبيقات آمنة ومتينة تعمل على إطار العمل NET</li>
+             <img src="see sharp.jpg" alt=" software ">
+
+
+
+<li><b>PHP:</b>
+
+             هي اختصار لـ “Hypertext Preprocessor”، وهي لغة برمجة نصية تُستخدم بشكل رئيسي لتطوير تطبيقات الويب. تعمل PHP على الخادم (Server-Side)، مما يعني أن الكود يُنفذ على الخادم قبل إرسال الصفحة إلى متصفح المستخدم. تُستخدم PHP مع قواعد بيانات مثل MySQL لبناء مواقع ديناميكية وتفاعلية.</li> 
+             <img src="php.jpg" alt=" software ">
+             
+              <li>
+         <b>HTML:</b> 
+         هي لغة توصيفية لإنشاء صفحات الويب وتطبيقات الويب، وترمز إلى Hypertext Markup Language (أي لغة النص الفائق). تُستخدَم مع لغة CSS و JavaScript لإنشاء صفحات ويب تفاعلية</li> 
+         <img src="html.jpg" alt=" software ">
+
+
+         <li>
+            <li><b>CSS:</b>
+             
+             كلمة css هي اختصار عن (Cascading Style Sheets)، وهي اللغة المسؤولة عن تنسيق صفحات الويب واعطائها شكل جمالي باستخدام الألوان والخطوط والعناصر التي تسمح لك بتنسيق الصفحة بالشكل الذي تريد.</li>
+             <img src="css.jpg" alt=" software ">
+             
+              <li><b>SQL:</b>
+              هي اختصار لي كلمة
+              
+        (Structured Query Language)    لغة معيارية تُستخدم لإدارة قواعد البيانات العلائقية. تُمكِّنك من إجراء عمليات متعددة مثل الاستعلام عن البيانات، تحديثها، إدخالها، وحذفها من الجداول.
+      
+      video_library</li> 
+             <img src="SQL.jpg" alt=" software ">
+
+            </ul> 
+        </div> </div>
+ <div id="operating_systems" style="display:none;"> <h2>أنظمة التشغيل</h2> <p>نظام التشغيل هو برنامج أساسي يدير موارد الحاسوب ويتيح للتطبيقات الأخرى العمل. هو الوسيط بين المستخدم والمكونات المادية للحاسوب. من الأمثلة على أنظمة التشغيل: Windows, macOS, Linux.</p> 
+
+
+                <div class="component"> 
+                  <img src="os.jpg" alt=" software ">
+
+
+
+        <h2>مهام نظام التشغيل</h2>
+
+
+        <ul> 
+      <li>إدارة الملفات والأجهزة.</li> <li>توفير واجهة مستخدم.</li>
+      <li>تنفيذ البرامج.</li> 
+      <li>إدارة الذاكرة.</li> 
+      </ul> 
+      </div>
+      </div> 
+      <div id="applications" style="display:none;"> 
+      <h2>التطبيقات</h2>
+      <p>التطبيقات هي البرامج التي يستخدمها المستخدمون مباشرة لأداء مهام محددة. من الأمثلة على التطبيقات: متصفحات الويب، معالجات النصوص، برامج الرسومات، وألعاب الفيديو.</p> 
+      <div class="component"> 
+      <h2>أنواع التطبيقات</h2> 
+      <img src="mostapplaction.jpg" alt=" software ">
+
+      <ul> 
+      <li>
+        <b>تطبيقات سطح المكتب:</b> تطبيقات تعمل بشكل مستقل على جهاز الكمبيوتر.</li> 
+        <li><b>تطبيقات الويب:</b> تطبيقات تعمل عبر الإنترنت وتستعرض في متصفح الويب.</li> <li><b>تطبيقات الجوال:</b> تطبيقات مصممة للهواتف الذكية والأجهزة اللوحية.
+        </li> 
+        </ul> 
+        </div> 
+        </div>
+         </div> 
+        </section> 
+        </div> 
+       
+
+    <script>
+        function showComponent(value) {
+            // إخفاء جميع الأقسام
+            var components = document.querySelectorAll('#components> div');
+            components.forEach(function(component) {
+                component.style.display = 'none';
+            });
+            // إظهار القسم المختار
+            if (value) {
+                document.getElementById(value).style.display = 'block';
+            }
+        }
+    </script>
+    <div class="component">
+      <p style="text-align:center;">
+        <a href="explore.html" class="back">العودة إلى الصفحة الرئيسية</a>
+      </p>
+    </div>
+     </body> 
+     </html>

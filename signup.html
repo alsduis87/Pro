@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>إنشاء حساب جديد</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">تأكيد كلمة المرور:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <input type="submit" value="إنشاء حساب">
+            <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+        </form>
+    </div>
+       <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // منع إعادة تحميل الصفحة
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // حفظ البيانات في Local Storage
+            localStorage.setItem(username, password);
+            alert('تم إنشاء الحساب بنجاح!');
+            document.getElementById('registerForm').reset();
+            window.location.href = 'login.html'; // توجيه المستخدم إلى صفحة تسجيل الدخول
+        });
+    </script>
+</body>
+
+</html>

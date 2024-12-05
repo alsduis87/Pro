@@ -1,0 +1,157 @@
+
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: lightseagreen;
+    color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* لون خلفية فاتح */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #ffffff; /* لون خلفية الصفحة */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: blue; /* لون النص */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black; /* لون نص التسمية */
+    font-weight: bold; /* خط مائل للتأكيد */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px; /* تباعد أكبر لإعطاء شعور بالراحة */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* تأثير عند التركيز */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #821D92EB; /* تغيير لون الحدود عند التركيز */
+    outline: none; /* إزالة التحديد الافتراضي */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #A70D0DEB; /* لون الخلفية */
+    color: white; /* لون النص */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* نص قوي */
+    transition: background-color 0.3s; /* تأثير عند تمرير الماوس */
+}
+
+input[type="submit"]:hover {
+    background-color: #088BEBEB; /* لون أغمق عند تمرير الماوس */
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: #666666; /* لون أفتح للنص */
+}
+
+a {
+    color: #007bff; /* لون الرابط */
+    text-decoration: none; /* إزالة خط تحت الرابط */
+}
+
+a:hover {
+    text-decoration: underline; /* إضافة خط تحت عند التمرير */
+}
+h1{
+  
+     
+              display: inline-block;
+            padding: 10px 10px;
+            background-color:  #AA47BE;
+            color: white;
+            margin: au;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+               border: 1px solid #ccc;
+            
+
+}

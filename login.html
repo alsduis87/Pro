@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+        <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{ font-family: Arial, sans-serif;
+        }
+    .container{ width: auto; 
+    margin: auto; }
+        .form-group{ margin: 15px auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="loginUsername">اسم المستخدم:</label>
+                <input type="text" id="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">كلمة المرور:</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+         
+  <input type="submit" value="تسجيل الدخول">
+
+        </form>
+        <p>ليس لديك حساب؟ <a href="signup.html">إنشاء حساب</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // منع إعادة تحميل الصفحة
+            const loginUsername = document.getElementById('loginUsername').value;
+            const loginPassword = document.getElementById('loginPassword').value;
+
+            const storedPassword = localStorage.getItem(loginUsername);
+            if (storedPassword === loginPassword) {
+                alert('تسجيل الدخول ناجح!');
+                window.location.href = 'welcome.html'; // توجيه المستخدم إلى صفحة المحتويات
+            } else {
+                alert('اسم المستخدم أو كلمة المرور غير صحيحة.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

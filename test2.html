@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار مكونات الحاسوب - صح / خطأ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .quiz-container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            margin-top: 20px;
+        }
+              .explore-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color:  #AA47BE;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .explore-button:hover {
+            background-color: rgba(230, 108, 66, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>اختبار مكونات الحاسوب - صح / خطأ</h1>
+        <form id="quiz-form">
+            <h3>1. وحدة المعالجة المركزية هي المكون الرئيسي الذي يتحكم في جميع العمليات داخل الكمبيوتر.</h3>
+            <label>
+                <input type="radio" name="question1" value="true"> صحيح
+            </label><br>
+            <label>
+                <input type="radio" name="question1" value="false"> خطأ
+            </label><br>
+
+            <h3>2. ذاكرة الوصول العشوائي (RAM) تستخدم لتخزين البيانات بشكل دائم.</h3>
+            <label>
+                <input type="radio" name="question2" value="true"> صحيح
+            </label><br>
+            <label>
+                <input type="radio" name="question2" value="false"> خطأ
+            </label><br>
+
+            <h3>3. القرص الصلب هو أحد مكونات إدخال البيانات في الكمبيوتر.</h3>
+            <label>
+                <input type="radio" name="question3" value="true"> صحيح
+            </label><br>
+            <label>
+                <input type="radio" name="question3" value="false"> خطأ
+            </label><br>
+
+            <button type="button" onclick="checkAnswers()">تقديم الإجابات</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const question1 = document.querySelector('input[name="question1"]:checked');
+            const question2 = document.querySelector('input[name="question2"]:checked');
+            const question3 = document.querySelector('input[name="question3"]:checked');
+            let result = "";
+
+            if (!question1 || !question2 || !question3) {
+                result = "يرجى الإجابة على جميع الأسئلة!";
+            } else {
+                if (question1.value === "true") {
+                    result += "إجابة السؤال الأول صحيحة!<br>";
+                } else {
+                    result += "إجابة السؤال الأول خاطئة.<br>";
+                }
+
+                if (question2.value === "false") {
+                    result += "إجابة السؤال الثاني صحيحة!<br>";
+                } else {
+                    result += "إجابة السؤال الثاني خاطئة.<br>";
+                }
+
+                if (question3.value === "false") {
+                    result += "إجابة السؤال الثالث صحيحة!<br>";
+                } else {
+                    result += "إجابة السؤال الثالث خاطئة.<br>";
+                }
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+    <div>
+      
+              <a href="explore.html" class="explore-button">العودة إلى الصفحة الرئيسية</a>
+
+    </div>
+</body>
+</html>

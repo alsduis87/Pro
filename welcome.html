@@ -1,0 +1,116 @@
+
+       
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرحباً بك في موقعنا</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        history.pushState(null, null, location.href); 
+        window.onpopstate = function () { 
+            history.pushState(null, null, location.href); 
+        };
+
+        // دالة لتحديث الوقت والتاريخ
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            document.getElementById('date-time').innerHTML = now.toLocaleString('ar-EG', options);
+        }
+
+        // تحديث الوقت كل ثانية
+        setInterval(updateTime, 1000);
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* نوع خط الصفحة */
+            background-color: #A0C1C1; /* لون خلفية الصفحة */
+            margin: 0; /* إزالة الهوامش الافتراضية */
+            padding: 20px;
+            height: 100vh; /* إعطاء ارتفاع كامل للصفحة */
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff; /* خلفية بيضاء */
+            padding: 40px; /* زيادة التباعد الداخلي */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative; /* لجعل العنصر يحتوي على تاريخ في الزاوية */
+            text-align: right; /* محاذاة النص */
+        }
+        h1 {
+            color: #333333;
+        }
+        p {
+            color: black; /* لون نص الفقرة */
+            line-height: 1.7; /* ارتفاع السطر */
+        }
+        .date-time {
+            position: absolute; /* وضع التاريخ بشكل مطلق */
+            top: 10px; /* المسافة من الأعلى */
+            right: 10px; /* المسافة من اليمين */
+            font-size: 16px; 
+            color: #007bff;
+            text-align: left; /* محاذاة النص إلى اليسار داخل زاوية */
+        }
+        .explore-button,
+        .logout-button {
+            display: block;
+            width: auto;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold; /* نص قوي */
+            margin-top: 20px;
+            text-decoration: none; /* إزالة الخط تحت الرابط */
+        }
+        .explore-button {
+            background-color: #007bff; /* لون زر الاستكشاف */
+            color: white; /* لون النص */
+        }
+        .explore-button:hover {
+            background-color: #9129BE; /* تغيير اللون عند تمرير الماوس على الزر */
+        }
+        .logout-button {
+            background-color: #dc3545; /* لون الخلفية لزر تسجيل الخروج */
+            color: white; /* لون النص */
+        }
+        .logout-button:hover {
+            background-color: blue; /* تغيير اللون عند تمرير الماوس على الزر */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date-time" id="date-time"></div>
+        <h1> مرحباً بك في موقعنا   !  </h1>
+        <p>
+            نحن سعداء بتواجدك هنا! موقعنا مصمم لتقديم أفضل المعلومات والخدمات التي تلبي احتياجاتك.
+            نحن نقدم محتوى مدهش عن كل ما يخص مكونات الحاسوب.
+        </p>
+        <p>
+            سواء كنت تبحث عن تحسين مهاراتك المعرفية بالحاسوب ستجد هنا ما تحتاجه.
+            نحن ملتزمون بتقديم محتوى عالي الجودة يسهل الوصول إليه ويمكنك الوثوق به.
+        </p>
+        
+        <a href="explore.html" class="explore-button">استكشاف المحتوى</a>
+        <a href="logout.html" class="logout-button">تسجيل الخروج</a>
+    </div>
+
+    <script>
+        // تحديث الوقت عند تحميل الصفحة لأول مرة
+        updateTime();
+    </script>
+</body>
+</html>

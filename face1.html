@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>واجهة الموقع</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(244, 244, 244, 0.9); /* لون خلفية مع شفافية */
+            overflow-x: hidden; /* لمنع التمرير الأفقي */
+            background-image: url("/4.jpg");
+            background-size: cover; /* لتغطية الخلفية بالكامل */
+            background-position: center; /* توسيط الصورة */
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 123, 255, 0.8); /* لون خلفية مع شفافية */
+            color: white;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #218838;
+                        transform: scale(1.05); /* تأثير تكبير الزر عند المرور */
+
+        }
+        
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* تبدأ خارج الشاشة */
+            background-color: #333;
+            transition: 0.3s; /* تأثير السلاسة عند الفتح */
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.1s;
+        }
+
+        .sidebar a:hover {
+            background-color: red;
+        }
+
+        .open-btn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="open-btn" onclick="toggleSidebar()">☰ فتح القائمة</button>
+
+    <div id="sidebar" class="sidebar">
+        <a href="web.html">تعريف الموقع</a>
+        <a href="how.html">من نحن</a>
+        <a href="server.html">خدماتنا</a>
+        <a href="contact.html">اتصل بنا</a>
+    </div>
+
+    <div class="header">
+        <h1>مرحباً بكم في موقعنا!</h1>
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="location.href='login.html'">تسجيل الدخول</button>
+        <button class="button" onclick="location.href='signup.html'">إنشاء حساب</button>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px"; // أغلق القائمة
+            } else {
+                sidebar.style.left = "0px"; // افتح القائمة
+            }
+        }
+
+        // إغلاق القائمة عند الضغط على الشاشة
+        window.addEventListener('click', function(event) {
+            var sidebar = document.getElementById("sidebar");
+            var openButton = document.querySelector('.open-btn');
+
+            // إذا كانت القائمة مفتوحة وتم النقر خارجيًا
+            if (sidebar.style.left === "0px" && !sidebar.contains(event.target) && !openButton.contains(event.target)) {
+                sidebar.style.left = "-250px"; // أغلق القائمة
+            }
+        });
+    </script>
+
+</body>
+</html>
